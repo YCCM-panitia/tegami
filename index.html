@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tegami - Emotional Wellness Platform</title>
+    <!-- Google Fonts for Inter (clean and human-friendly) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Tegami</div>
+        <div class="tagline">Your Digital Letter for Emotional Reflection</div>
+    </header>
+
+    <section id="envelope-section" aria-labelledby="envelope-title">
+        <h2 id="envelope-title">Open Your Daily Letter</h2>
+        <div class="envelope-container">
+            <div class="envelope" id="envelope" tabindex="0" role="button" aria-label="Click to open your daily letter">
+                <div class="flap"></div>
+            </div>
+            <div class="message-card" id="message-card">
+                <p id="daily-message-text">Welcome to your day. Remember, every moment is a chance to grow.</p>
+                <div class="buttons">
+                    <button id="new-letter-btn">New Letter</button>
+                    <button id="share-letter-btn">Share</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mood-section" aria-labelledby="mood-title">
+        <h2 id="mood-title">How Are You Feeling Today?</h2>
+        <div class="mood-buttons">
+            <button class="mood-btn happy" data-mood="happy" aria-label="Select happy mood">😊</button>
+            <button class="mood-btn sad" data-mood="sad" aria-label="Select sad mood">😢</button>
+            <button class="mood-btn calm" data-mood="calm" aria-label="Select calm mood">😌</button>
+            <button class="mood-btn anxious" data-mood="anxious" aria-label="Select anxious mood">😰</button>
+            <button class="mood-btn excited" data-mood="excited" aria-label="Select excited mood">🤩</button>
+            <button class="mood-btn tired" data-mood="tired" aria-label="Select tired mood">😴</button>
+        </div>
+        <div class="affirmation-card" id="affirmation-card">
+            <p id="affirmation-text"></p>
+            <button id="copy-affirmation-btn">Copy Affirmation</button>
+        </div>
+    </section>
+
+    <section id="journal-section" aria-labelledby="journal-title">
+        <h2 id="journal-title">Reflection Journal</h2>
+        <p id="journal-prompt">Today's prompt: What made you smile today?</p>
+        <form class="journal-form" id="journal-form">
+            <textarea id="journal-textarea" placeholder="Write your reflections here..." aria-label="Journal entry textarea"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="loading" id="loading">Generating AI response...</div>
+        <div class="ai-response" id="ai-response"></div>
+    </section>
+
+    <section id="daily-message-section" aria-labelledby="daily-msg-title">
+        <h2 id="daily-msg-title">Daily Inspirational Message</h2>
+        <div class="daily-message">
+            <p id="inspirational-message">Embrace the present; it's where your power lies.</p>
+            <div class="buttons">
+                <button id="new-message-btn">New Message</button>
+                <button id="share-message-btn">Share</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
